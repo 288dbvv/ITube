@@ -1,0 +1,118 @@
+/*
+	itube_theme_items.css:
+	Файл позиционирования элементов сайта
+*/
+/* Тело сайта */
+body
+{
+	margin: 0;
+	padding: 0;
+}
+/* Общие характеристики */
+/*#logo-name,*/ #logo-img, article,
+.article-video > div.left
+{
+	float: left;
+}
+nav, .article-video > div.right
+{
+	float: right;
+}
+/* Шапка сайта */
+header
+{
+	padding: 5px;
+	height: 95px;
+}
+/* Логотип */
+#logo-img
+{
+	padding-left: 3%;
+}
+/*
+#logo-name
+{
+	color: white;
+	font-size: 45pt;
+	max-width: max-content;
+}
+*/
+/* Панель навигации */
+nav
+{
+	padding-right: 2.5%;
+}
+/*
+	Подписи к элементам
+	правой группы панели навигации
+*/
+.nav-items-right > div,
+.nav-items-right-click > div 
+{
+	margin-top: 2px;
+}
+/* Панель аккаунта и языка */
+#account, #lang
+{
+	position: absolute;
+	right: 0;
+	display: none;
+	margin-right: 3pt;
+	z-index: 1;
+}
+/* Форма логина */
+#form-login
+{
+	padding: 7%;
+}
+#form-login > input[type="text"],
+#form-login > input[type="password"]
+{
+	margin-bottom: 10pt;
+	margin-top: 5pt;
+	padding-left: 8px;
+
+}
+/* Область видео контента */
+main {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2em;
+}
+.article-video {
+	padding-bottom: 2em;
+}
+.article-video > div.left,
+.article-video > div.right
+{
+	padding-top: 5pt;
+}
+.article-video > div.right
+{
+	padding-right: 12px;
+}
+/* Кнопки */
+#button-1, #button-2
+{
+	display: none;
+	position: absolute;
+	width: 475px;
+	height: 172px;
+	border-radius: 1em;
+	font-size: 50pt;
+	letter-spacing: 15pt;
+}
+#button-1
+{
+	left: 55px;
+	top: 200px;
+}
+#button-2
+{
+	left: 55px;
+	top: 500px;
+}
