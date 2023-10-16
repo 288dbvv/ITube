@@ -1,0 +1,197 @@
+/*
+	itube_theme_styles.css:
+	Файл стиля сайта и его элементов
+*/
+/* Переменные, настройки сайта */
+:root
+{
+	/* Основной шрифт сайта*/
+	--theme-ff: Century Gothic;
+	/* Шапка сайта */
+	--header-gradclr-1: rgba(126,221,255, 0.9);
+	--header-gradclr-2: rgba(0,187,255, 0.7);
+	--header-gradclr: radial-gradient(
+		circle at 100% 100%,
+		var(--header-gradclr-1) 0%,
+		var(--header-gradclr-2) 95%
+	);
+	/* Обычная кнопка */
+	--button-gradclr-1: rgba(126,221,255, 0.75);
+	--button-gradclr-2: rgba(0,187,255, 0.75);
+	--button-gradclr: radial-gradient(
+		circle at 100% 100%,
+		var(--button-gradclr-1) 0%,
+		var(--button-gradclr-2) 95%
+	);
+	/* Инвертированная кнопка */
+	--button-inv-gradclr-1: rgba(126,221,255, 0.5);
+	--button-inv-gradclr-2: rgba(0,187,255, 0.5);
+	--button-inv-gradclr: radial-gradient(
+		circle at 100% 100%,
+		var(--button-inv-gradclr-1) 0%,
+		var(--button-inv-gradclr-2) 95%
+	);
+}
+/* Общие характеристики */
+body, header, .nav-items-right > div,
+.nav-items-right-click > div,
+#form-login > input[type="text"],
+#form-login > input[type="password"],
+.button-inv
+{
+	background-color: white;
+}
+#form-login > input[type="text"],
+#form-login > input[type="password"],
+.nav-items-right, .nav-items-right-click, .nav-items-right-click,
+ .button, .button-inv
+{
+	border: none;
+}
+.nav-items-right > div, 
+.nav-items-right-click > div , #account,
+#lang, .video-name, .video-rating, .button, .button-inv
+/*#logo-name*/
+{
+	font-family: var(--theme-ff);
+}
+/* Шапка сайта */
+header
+{
+	background-image: var(--header-gradclr);
+	box-shadow:
+		0px 3px 10px 1px #0000004B,
+		inset 0px -2px 10px 2px #00000018;
+}
+/* Логотип */
+#logo-img
+{
+	height: 92.5px; 
+	width: 168.75px;
+}
+/*
+	Подписи к элементам
+	правой группы панели навигации
+*/
+.nav-items-right, .nav-items-right-click
+{
+	text-align: center;
+	margin-top: 3px;
+	background: none;
+}
+.nav-items-right-click
+{
+	filter: drop-shadow(
+		3px 3px 5px #0000001D
+	);
+	color: skyblue;
+}
+.nav-items-right > div,
+.nav-items-right-click > div 
+{
+	width: 75px;
+	height: 18px;
+	border-radius: 8px;
+	font-size: 10pt;
+	mix-blend-mode: screen;
+}
+/* Панель навигации */
+#account, #lang {
+	width: 20%;
+	height: 300px;
+	background-color: #fcfcfc;
+	border: 1px solid #0000001B;
+	border-radius: 3px;
+	box-shadow:
+		0px 5px 10px #0000002B
+}
+/* Форма логина */
+#form-login > input[type="text"],
+#form-login > input[type="password"]
+{
+	height: 20pt;
+	width: 100%;
+	border-radius: 8px;
+	box-shadow:
+		0px 1px 10px #0000002B
+}
+#form-login > input[type="text"]:focus,
+#form-login > input[type="password"]:focus
+{
+	outline: none;
+}
+/* Область видео контента */
+main {
+	width: 100%;
+}
+.article-video > div.left,
+.article-video > div.right
+{
+	font-size: 14pt;
+	width: max-content;
+}
+.video-preview
+{
+	background-color: #00000016;
+	border-radius: 12px;
+	height: 202px;
+	width: 360px;
+}
+.video-name, .video-name:visited,
+.video-rating, .video-rating:visited
+{
+	color: black;
+}
+.video-name:hover {
+	color: #000000d0;
+}
+.video-name, .video-rating
+{
+	text-decoration: none;
+}
+/* Кнопки */
+.button
+{
+	background-image: var(--button-gradclr);
+	color: white;
+	text-shadow: 1px 1px 3px #00000044;
+	box-shadow:
+		3px 3px 10px 1px #00000044,
+		inset 5px 5px 5px 1px #00000011;
+}
+.button:focus
+{
+	text-shadow: 
+		-2px 0px 8px #ffffff48,
+		2px 0px 8px #ffffff48,
+		0px -2px 8px #ffffff48,
+		0px 2px 8px #ffffff48,
+		1px 1px 3px #00000044;
+	box-shadow:
+		3px 3px 10px 1px #00000048,
+		inset 5px 5px 5px 1px #00000022;
+}
+.button-inv
+{
+	background-image: var(--button-inv-gradclr);
+	text-shadow: 1px 1px 3px #00000044;
+	box-shadow:
+		3px 3px 10px 1px #00000044,
+		inset 5px 5px 5px 1px #00000011;
+	-webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.button-inv:focus
+{
+	text-shadow: 
+		-1px 0px 8px #ffffff2C,
+		1px 0px 8px #ffffff2C,
+		0px -1px 8px #ffffff2C,
+		0px 1px 8px #ffffff2C,
+		1px 1px 3px #00000044;
+	box-shadow:
+		3px 3px 10px 1px #0000004B,
+		inset 5px 5px 5px 1px #00000022;
+}

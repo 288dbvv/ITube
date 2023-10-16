@@ -1,0 +1,10 @@
+/*
+	itube_theme.css:
+	Файл подключения стилей
+
+	Для подключения - вставить в <head></head>:
+	<link rel="stylesheet" href="./static/itube_theme.css" type="text/css">
+	P.S. после <title></title>
+*/
+@import "itube_theme_styles.css";
+@import "itube_theme_items.css"

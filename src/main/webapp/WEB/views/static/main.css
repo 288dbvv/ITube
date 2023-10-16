@@ -1,0 +1,38 @@
+:root {
+	--size : 40pt;
+}
+body {
+	background-color: darkcyan;
+	color: cyan;
+	text-align: center;
+	display: table-cell;
+}
+#h {
+	font-size: var(--size);
+	vertical-align: middle;
+	padding-top: calc(40vh - var(--size));
+	margin-left: auto;
+	margin-right: auto;
+	width: 100vw;
+	opacity: 0.75;
+	
+}
+
+@keyframes spin1 {
+	from {
+		transform: rotate3d(0, 0, 0, 0deg);
+		opacity: 1;
+	}
+	to { 
+		transform: rotate3d(1, -3, 0, 360deg);
+		opacity: 0;
+		color: skyblue;
+	}
+}
+#h:hover {
+	animation-name: spin1;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	transform-style: preserve-3d;
+}
